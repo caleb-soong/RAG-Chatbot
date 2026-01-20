@@ -10,7 +10,6 @@ db_password = os.environ.get("DB_PASSWORD")
 
 def generate_embedding(text):
     """Generate an embedding vector for the given text using OpenAI API."""
-    client = openai.OpenAI()
     response = client.embeddings.create(
         model="text-embedding-3-small",
         input=text,
